@@ -1,0 +1,165 @@
+.chat{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #dddddd35;
+    border-left: 1px solid #dddddd35;
+
+    .top{
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #dddddd35;
+
+        .user{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .texts{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                span{
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+
+                p{
+                    font-size: 14px;
+                    font-weight: 100;
+                    color: #aaa;
+                }
+            }
+        }
+
+        .icons{
+            display: flex;
+            gap: 20px;
+
+            img{
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .center{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        overflow-y: scroll;
+        padding: 20px;
+        gap: 20px;
+
+        .message{
+            display: flex;
+            gap: 10px;
+            max-width: 70%;
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .texts{
+                p{
+                    font-size: 14px;
+                    background-color: rgba(17,25,40,0.3);
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+
+                span{
+                    font-size: 12px;
+                    color: #bbb;
+                }
+            }
+            
+            &.own{
+                align-self: flex-end;
+                display: flex;
+                flex-direction: column;
+                
+                p{
+                    background-color: #5183fe;
+                }
+
+                img{
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .bottom{
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        border-top: 1px solid #dddddd35;
+        justify-content: space-between;
+
+        img{
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .icons{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        input{
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            background-color: rgba(17, 25 , 40 , 0.5);
+            color: white;
+        }
+
+        .emoji{
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            .emojiPicker{
+                position: absolute;
+                bottom: 50px;
+                right: -200px;
+
+            }
+
+        }
+
+        .sendButton{
+            padding: 0px 10px;
+            cursor: pointer;
+            background-color: #5183fe;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+    }
+}
